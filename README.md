@@ -1,4 +1,6 @@
 # yii2-altcoind
+[![Total Downloads](https://poser.pugx.org/aleksandrzhiliaev/yii2-altcoind/downloads)](https://packagist.org/packages/aleksandrzhiliaev/yii2-altcoind)
+
 Yii2 Alticoind module+extension. Supports connection between yii2 and coin daemons (Bitcoind, Litecoind etc..)
 
 You can use only altcoind components in your application to make calls to your bitcoind,litecoind servers or also use module which provides you web interface (show balance, make new transfer, show generated addresses, generate new address, show private keys of your addresses).
