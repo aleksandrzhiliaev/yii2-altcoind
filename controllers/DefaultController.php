@@ -2,7 +2,7 @@
 
 namespace aleksandrzhiliaev\altcoind\controllers;
 
-use app\modules\cryptowallet\models\TransferForm;
+use aleksandrzhiliaev\altcoind\models\TransferForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
