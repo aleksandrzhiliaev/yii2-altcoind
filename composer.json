@@ -1,0 +1,38 @@
+{
+    "name": "aleksandrzhiliaev/yii2-altcoind",
+    "description": "Alticoind module+extension. Supports connection between yii2 and coin daemons (Bitcoind, Litecoind etc..)",
+    "keywords": [
+        "yii2",
+        "yii2-bitcoin",
+        "litecoin",
+        "bitcoin"
+    ],
+    "type": "yii2-module",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/aleksandrzhiliaev/yii2-altcoind/issues?state=open",
+        "forum": "https://github.com/aleksandrzhiliaev/yii2-altcoind",
+        "source": "https://github.com/aleksandrzhiliaev/yii2-altcoind"
+    },
+    "authors": [
+        {
+            "name": "Aleksandr Zhiliaev",
+            "email": "sassoftinc@gmail.com",
+            "homepage": "http://sassoft.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "^2.0.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "^2.0.0",
+        "codeception/specify": "^0.4.3",
+        "codeception/verify": "^0.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "aleksandrzhiliaev\\altcoind\\": ""
+        }
+    }
+}
