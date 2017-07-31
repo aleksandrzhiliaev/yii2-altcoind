@@ -1,5 +1,6 @@
 # yii2-altcoind
 [![Total Downloads](https://poser.pugx.org/aleksandrzhiliaev/yii2-altcoind/downloads)](https://packagist.org/packages/aleksandrzhiliaev/yii2-altcoind)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/881ec73e286449b1a419db243510a648)](https://www.codacy.com/app/sassoftinc/yii2-altcoind?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aleksandrzhiliaev/yii2-altcoind&amp;utm_campaign=Badge_Grade)
 
 Yii2 Alticoind module+extension. Supports connection between yii2 and coin daemons (Bitcoind, Litecoind etc..)
 
