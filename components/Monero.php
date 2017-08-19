@@ -7,6 +7,8 @@ use yii\base\Component;
 
 class Monero extends Component
 {
+    const MONERO_DIGITS = 1000000000000;
+
     /**
      * @var Wallet
      */
@@ -39,7 +41,7 @@ class Monero extends Component
     {
         $options = [
             'destinations' => (object)[
-                'amount' => $amount,
+                'amount' => $amount * self::MONERO_DIGITS,
                 'address' => $address,
             ],
         ];
@@ -53,6 +55,10 @@ class Monero extends Component
     {
         $info = $this->moneroClient->getBalance();
         $info = json_decode($info, true);
+        $info['balance'] /= self::MONERO_DIGITS;
+        $info['total_balance'] = $info['balance'];
+        $info['unlocked_balance'] /= self::MONERO_DIGITS;
+        $info['balance'] = $info['unlocked_balance'];
 
         return $info;
     }
