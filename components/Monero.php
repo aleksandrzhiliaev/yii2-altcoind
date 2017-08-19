@@ -41,7 +41,7 @@ class Monero extends Component
     {
         $options = [
             'destinations' => (object)[
-                'amount' => $amount * self::MONERO_DIGITS,
+                'amount' => $amount,
                 'address' => $address,
             ],
         ];
