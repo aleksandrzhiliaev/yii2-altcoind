@@ -78,4 +78,20 @@ class Monero extends Component
 
     }
 
+    public function getPaymentId($address)
+    {
+        $data = $this->moneroClient->splitIntegratedAddress($address);
+        $data = json_decode($data, true);
+
+        return $data['payment_id'];
+    }
+
+    public function getPayments($paymentId)
+    {
+        $data = $this->moneroClient->getPayments($paymentId);
+        $data = json_decode($data, true);
+
+        return $data;
+    }
+
 }
