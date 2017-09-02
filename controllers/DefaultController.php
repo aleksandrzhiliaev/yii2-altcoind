@@ -69,18 +69,14 @@ class DefaultController extends Controller
     public function actionAddresses($currency)
     {
         $addresses = [];
-        $keys = [];
 
         try {
             $addresses = Yii::$app->get($currency)->showAddresses();
-            foreach ($addresses as $address) {
-                $keys[] = Yii::$app->get($currency)->dumpPrivateKey($address);
-            }
         } catch (\Exception $e) {
             \Yii::error($e->getMessage());
         }
 
-        return $this->render('addresses', ['addresses' => $addresses, 'keys' => $keys, 'currency' => $currency]);
+        return $this->render('addresses', ['addresses' => $addresses, 'currency' => $currency]);
     }
 
     public function actionNewaddress($currency)

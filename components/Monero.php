@@ -24,17 +24,12 @@ class Monero extends Component
         $this->moneroClient = new Wallet($this->host, $this->port);
     }
 
-    public function generateAddress($accountName = '')
+    public function generateAddress()
     {
         $address = $this->moneroClient->integratedAddress();
         $address = json_decode($address, true);
 
         return $address['integrated_address'];
-    }
-
-    public function validateAddress($address)
-    {
-
     }
 
     public function send($address, $amount)
@@ -61,21 +56,6 @@ class Monero extends Component
         $info['balance'] = $info['unlocked_balance'];
 
         return $info;
-    }
-
-    public function showTransactions($accountName = '')
-    {
-
-    }
-
-    public function showAddresses($accountName = '')
-    {
-
-    }
-
-    public function dumpPrivateKey($address)
-    {
-
     }
 
     public function getPaymentId($address)

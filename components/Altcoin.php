@@ -41,16 +41,6 @@ class Altcoin extends Component
         }
     }
 
-    public function validateAddress($address)
-    {
-        $datas = $this->altcoinClient->validateaddress($address);
-        if ($this->altcoinClient->error == "") {
-            return $datas;
-        } else {
-            throw new ErrorException('validateaddress error: '.$this->altcoinClient->error);
-        }
-    }
-
     public function send($address, $amount)
     {
         $txid = $this->altcoinClient->sendtoaddress($address, $amount);
@@ -73,21 +63,6 @@ class Altcoin extends Component
         }
     }
 
-    public function showTransactions($accountName = '')
-    {
-        if (!$accountName) {
-            $accountName = $this->username;
-        }
-
-        $datas = $this->altcoinClient->listtransactions($accountName);
-
-        if ($this->altcoinClient->error == "") {
-            return $datas;
-        } else {
-            throw new ErrorException('getinfo error: '.$this->altcoinClient->error);
-        }
-    }
-
     public function showAddresses($accountName = '')
     {
         if (!$accountName) {
@@ -100,17 +75,6 @@ class Altcoin extends Component
             return $datas;
         } else {
             throw new ErrorException('getaddressesbyaccount error: '.$this->altcoinClient->error);
-        }
-    }
-
-    public function dumpPrivateKey($address)
-    {
-        $datas = $this->altcoinClient->dumpprivkey($address);
-
-        if ($this->altcoinClient->error == "") {
-            return $datas;
-        } else {
-            throw new ErrorException('dumpprivkey error: '.$this->altcoinClient->error);
         }
     }
 

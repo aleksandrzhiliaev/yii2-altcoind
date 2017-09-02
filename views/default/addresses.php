@@ -31,7 +31,11 @@ $i = 0;
                         <a href="https://chainz.cryptoid.info/ltc/address.dws?<?= $address ?>"
                            target="_blank"><?= $address ?></a>
                     <?php } ?>
-                    => <?= $keys[$i] ?>
+
+                    <?php if ($currency == 'ethereum') { ?>
+                        <a href="https://etherscan.io/address/<?= $address ?>"
+                           target="_blank"><?= $address ?></a>
+                    <?php } ?>
                 </td>
 
             </tr>
