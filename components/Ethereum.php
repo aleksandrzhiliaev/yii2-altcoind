@@ -32,14 +32,19 @@ class Ethereum extends Component
         return $data['result'];
     }
 
-    public function send($fromAddress, $toAddress, $amount)
+    public function send($fromAddress, $toAddress, $amount, $feePaySender=true)
     {
         $value = $amount * self::ETHER_DIGITS;
 
         $gas = 21000;
         $gasPrice = 21000000000;
         $tranFee = $gasPrice * $gas;
-        $value -= $tranFee;
+
+        if ($feePaySender) {
+            $value += $tranFee;
+        } else {
+            $value -= $tranFee;
+        }
 
         $data = $this->ethereumClient->call('personal_unlockAccount', [$fromAddress, '', 0]);
         if (isset($data['error'])) {
