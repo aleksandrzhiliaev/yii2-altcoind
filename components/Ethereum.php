@@ -32,7 +32,7 @@ class Ethereum extends Component
         return $data['result'];
     }
 
-    public function send($fromAddress, $toAddress, $amount, $feePaySender=true)
+    public function send($fromAddress, $toAddress, $amount, $feePaySender = true)
     {
         $value = $amount * self::ETHER_DIGITS;
 
@@ -40,9 +40,7 @@ class Ethereum extends Component
         $gasPrice = 21000000000;
         $tranFee = $gasPrice * $gas;
 
-        if ($feePaySender) {
-            $value += $tranFee;
-        } else {
+        if (!$feePaySender) {
             $value -= $tranFee;
         }
 
