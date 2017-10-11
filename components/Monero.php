@@ -32,7 +32,7 @@ class Monero extends Component
         return $address['integrated_address'];
     }
 
-    public function send($address, $amount)
+    public function send($address, $amount, $paymentId = '')
     {
         $options = [
             'destinations' => (object)[
@@ -40,6 +40,11 @@ class Monero extends Component
                 'address' => $address,
             ],
         ];
+
+        if ($paymentId) {
+            $options['payment_id'] = $paymentId;
+        }
+
         $txid = $this->moneroClient->transfer($options);
         $txid = json_decode($txid, true);
 
