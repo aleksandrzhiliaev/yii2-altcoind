@@ -57,6 +57,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         <a href="<?= Url::to(['info', 'currency' => $wallet['name']]) ?>"><button type="button" class="btn btn-info">Info</button></a>
                         <a href="<?= Url::to(['addresses', 'currency' => $wallet['name']]) ?>"><button type="button" class="btn btn-warning">Show addresses</button></a>
                         <a href="<?= Url::to(['newaddress', 'currency' => $wallet['name']]) ?>"><button type="button" class="btn btn-success">Generate new address</button></a>
+                        <?php
+                        if ($wallet['name'] == 'monero')
+                            echo Html::a('Transfers', ['monero/transfers'], ['class' => 'btn btn-info']);
+                         ?>
                     <?php } ?>
                 </td>
             </tr>
@@ -80,6 +84,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'litecoin' => 'LTC',
         'ethereum' => 'ETH',
         'monero' => 'XMR',
+        'Ripple' => 'XRP'
     ]) ?>
 
 
