@@ -48,7 +48,7 @@ class Monero extends Component
         $txid = $this->moneroClient->transfer($options);
         $txid = json_decode($txid, true);
 
-        if ($txid['code'] < 0) {
+        if (isset($txid['code']) && $txid['code'] < 0) {
             throw new \Exception('Monero send exception raised: '.$txid['message']);
         }
 
