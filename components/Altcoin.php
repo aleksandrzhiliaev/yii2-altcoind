@@ -63,6 +63,17 @@ class Altcoin extends Component
         }
     }
 
+    public function getTransactionsList()
+    {
+        $trans = $this->altcoinClient->listtransactions();
+
+        if ($this->altcoinClient->error == "") {
+            return $trans;
+        } else {
+            throw new ErrorException('listtransactions error: '.$this->altcoinClient->error);
+        }
+    }
+
     public function showAddresses($accountName = '')
     {
         if (!$accountName) {
