@@ -19,7 +19,7 @@ class DefaultController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'addresses', 'newaddress', 'info'],
+                        'actions' => ['index', 'addresses', 'newaddress', 'info', 'transfers'],
                         'roles' => ['@'],
                         'matchCallback' => function ($rule, $action) {
                             return in_array(strtolower(Yii::$app->user->identity->login), $this->module->allowedUsers);
