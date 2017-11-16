@@ -39,6 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </td>
         </tr>
 
+
         <?php foreach ($wallets as $wallet) { ?>
             <tr>
                 <td><?= $wallet['name'] ?></td>
@@ -54,14 +55,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 </td>
                 <td>
                     <?php if ($wallet['info']['balance'] >= 0) { ?>
-                        <a href="<?= Url::to(['info', 'currency' => $wallet['name']]) ?>"><button type="button" class="btn btn-info">Info</button></a>
-                        <a href="<?= Url::to(['addresses', 'currency' => $wallet['name']]) ?>"><button type="button" class="btn btn-warning">Show addresses</button></a>
-                        <a href="<?= Url::to(['newaddress', 'currency' => $wallet['name']]) ?>"><button type="button" class="btn btn-success">Generate new address</button></a>
+                        <a href="<?= Url::to(['info', 'currency' => $wallet['name']]) ?>">
+                            <button type="button" class="btn btn-info">Info</button>
+                        </a>
+                        <a href="<?= Url::to(['addresses', 'currency' => $wallet['name']]) ?>">
+                            <button type="button" class="btn btn-warning">Show addresses</button>
+                        </a>
+                        <a href="<?= Url::to(['newaddress', 'currency' => $wallet['name']]) ?>">
+                            <button type="button" class="btn btn-success">Generate new address</button>
+                        </a>
                     <?php } ?>
                 </td>
             </tr>
 
         <?php } ?>
+
 
     </table>
 
@@ -88,5 +96,9 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <?php ActiveForm::end(); ?>
+
+    <p>
+        That page is cached in 60 sec, for actual information please use Info buttons.
+    </p>
 
 </div>
