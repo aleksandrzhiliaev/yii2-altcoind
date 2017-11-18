@@ -57,7 +57,21 @@ After installation you need to define your altcoind components in your yii conta
             'class' => 'aleksandrzhiliaev\altcoind\components\Monero',
             'host' => 'rpc_host',
             'port' => 'rpc_port',
-        ]
+        ],
+        'ripple' => [
+            'class' => 'app\components\coin\Ripple',
+            'urlNode' => 'url',
+            'address' => 'xrp_address',
+            'secret' => 'xrp_secret',
+        ],
+        'zcash' => [
+            'class' => 'aleksandrzhiliaev\altcoind\components\Altcoin',
+            'username' => 'zec_account',
+            'password' => 'zec_password',
+            'host' => 'zec_host',
+            'port' => 'zec_port',
+        ],
+    
         ...
 ]
 ...
@@ -101,4 +115,10 @@ Also you need to add a list of wallets which will be used in web interface.
 
 Currencies support
 ------------------
-Currently this module supports: Bitcoind, Litecoind, Monero, geth servers.
+Currently this module supports: 
+* Bitcoin
+* Litecoin
+* Monero
+* Ethereum
+* Ripple
+* Zcash
