@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 /* @var $transferForm TransferForm */
 
 
-$this->title = Yii::t('app', 'Wallets');
+$this->title = Yii::t('app', 'Your wallets');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="log-index">
@@ -88,6 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'litecoin' => 'LTC',
         'ethereum' => 'ETH',
         'monero' => 'XMR',
+        'zcash' => 'ZEC',
     ]) ?>
 
 
@@ -97,8 +98,5 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php ActiveForm::end(); ?>
 
-    <p>
-        That page is cached in 60 sec, for actual information please use Info buttons.
-    </p>
 
 </div>

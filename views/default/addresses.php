@@ -33,8 +33,11 @@ $i = 0;
                     <?php } ?>
 
                     <?php if ($currency == 'ethereum') { ?>
-                        <a href="https://etherscan.io/address/<?= $address ?>"
-                           target="_blank"><?= $address ?></a>
+                        <a href="https://etherscan.io/address/<?= $address ?>" target="_blank"><?= $address ?></a>
+                    <?php } ?>
+
+                    <?php if ($currency == 'zcash') { ?>
+                        <a href="https://zchain.online/address/<?= $address ?>" target="_blank"><?= $address ?></a>
                     <?php } ?>
                 </td>
 

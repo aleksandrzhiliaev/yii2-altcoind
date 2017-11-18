@@ -30,7 +30,7 @@ class DefaultController extends Controller
             [
                 'class' => 'yii\filters\PageCache',
                 'only' => ['index'],
-                'duration' => 60,
+                'duration' => $this->module->mainPageCache,
             ],
         ];
     }
@@ -88,8 +88,8 @@ class DefaultController extends Controller
     {
         try {
             $address = Yii::$app->get($currency)->generateAddress();
-            Yii::$app->session->setFlash('newAddress', $address);
-
+            $this->renderContent('New generated address: '.$address);
+            Yii::$app->end();
         } catch (\Exception $e) {
             \Yii::error($e->getMessage());
         }

@@ -11,7 +11,7 @@ class Altcoin extends Component
     /**
      * @var EasyBitcoin
      */
-    private $altcoinClient;
+    protected $altcoinClient;
 
     public $username;
 

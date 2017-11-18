@@ -18,6 +18,8 @@ class Module extends \yii\base\Module
 
     public $allowedUsers;
 
+    public $mainPageCache = 0;
+
     public function init()
     {
         parent::init();

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alexanderzhilyaev
- * Date: 02.09.17
- * Time: 19:17
- */
 
 namespace aleksandrzhiliaev\altcoind\clients;
 
