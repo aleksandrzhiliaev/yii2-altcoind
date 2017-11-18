@@ -21,7 +21,7 @@ php composer.phar require --prefer-dist aleksandrzhiliaev/yii2-altcoind
 or add
 
 ```
-"aleksandrzhiliaev/yii2-altcoind": "~0.0.1"
+"aleksandrzhiliaev/yii2-altcoind": "*"
 ```
 
 to the require section of your `composer.json` file.
