@@ -102,7 +102,8 @@ To use web interface you need to add module in `modules` section:
             'class' => 'aleksandrzhiliaev\altcoind\Module',
             'layout' => '@app/views/layouts/admin',
             'allowedUsers' => ['admin'],
-            'wallets' => ['bitcoin', 'litecoin'],
+            'wallets' => ['bitcoin', 'litecoin', 'ethereum', 'monero', 'ripple', 'zcash'],
+            'mainPageCache' => 60 * 1,
         ],
         ...
 ]
