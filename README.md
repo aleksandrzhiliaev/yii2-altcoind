@@ -50,7 +50,7 @@ After installation you need to define your altcoind components in your yii conta
         ],
         'ethereum' => [
             'class' => 'aleksandrzhiliaev\altcoind\components\Ethereum',
-            'host' => 'rpc_host,
+            'host' => 'rpc_host',
             'port' => 'rpc_port',
         ],
         'monero' => [
