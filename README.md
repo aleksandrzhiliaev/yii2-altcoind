@@ -59,7 +59,7 @@ After installation you need to define your altcoind components in your yii conta
             'port' => 'rpc_port',
         ],
         'ripple' => [
-            'class' => 'app\components\coin\Ripple',
+            'class' => 'aleksandrzhiliaev\altcoind\components\Ripple',
             'urlNode' => 'url',
             'address' => 'xrp_address',
             'secret' => 'xrp_secret',
