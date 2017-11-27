@@ -21,6 +21,8 @@ class Ethereum extends Component
 
     public $gas = 21000;
 
+    public $gasPrice = 21000000000;
+
     public function init()
     {
         parent::init();
@@ -37,9 +39,7 @@ class Ethereum extends Component
     public function send($fromAddress, $toAddress, $amount, $feePaySender = true)
     {
         $value = $amount * self::ETHER_DIGITS;
-
-        $gasPrice = 21000000000;
-        $tranFee = $gasPrice * $this->gas;
+        $tranFee = $this->gasPrice * $this->gas;
 
         if (!$feePaySender) {
             $value -= $tranFee;
@@ -54,7 +54,7 @@ class Ethereum extends Component
             'from' => $fromAddress,
             'to' => $toAddress,
             'gas' => '0x'.dechex($this->gas),
-            'gasPrice' => '0x'.dechex($gasPrice),
+            'gasPrice' => '0x'.dechex($this->gasPrice),
             'value' => '0x'.dechex($value),
         ];
 
