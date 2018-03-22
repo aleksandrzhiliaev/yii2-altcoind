@@ -89,6 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'ethereum' => 'ETH',
         'monero' => 'XMR',
         'zcash' => 'ZEC',
+        'bytecoin' => 'BCN'
     ]) ?>
 
 
