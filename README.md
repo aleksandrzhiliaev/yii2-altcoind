@@ -127,3 +127,5 @@ Currently this module supports:
 * Ethereum
 * Ripple
 * Zcash
+* Bytecoin
+
