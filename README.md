@@ -71,6 +71,10 @@ After installation you need to define your altcoind components in your yii conta
             'host' => 'zec_host',
             'port' => 'zec_port',
         ],
+        'bytecoin' => [
+            'class' => 'aleksandrzhiliaev\altcoind\components\Bytecoin',
+            'host' => 'bcn_host',           
+        ],
     
         ...
 ]
