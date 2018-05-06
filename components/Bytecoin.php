@@ -7,7 +7,7 @@ use Yii;
 use yii\base\Component;
 
 
-class Bytecoin extends \yii\base\Component
+class Bytecoin extends Component
 {
     public $host;
     
