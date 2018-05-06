@@ -54,7 +54,7 @@ class Altcoin extends Component
 
     public function getInfo()
     {
-        $info = $this->altcoinClient->getinfo();
+        $info = $this->altcoinClient->getwalletinfo();
 
         if ($this->altcoinClient->error == "") {
             return $info;
